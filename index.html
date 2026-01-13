@@ -406,6 +406,21 @@
       gap: 14px;
     }
 
+    /* Ensure project card images are visually aligned */
+    .cards .card .img{
+      width:100%;
+      height:220px; /* fixed height to align cards */
+      object-fit:cover; /* crop rather than distort */
+      display:block;
+      border-radius: calc(var(--radius) - 6px);
+      border:1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.02);
+    }
+
+    @media (max-width: 980px){
+      .cards .card .img{ height:160px }
+    }
+
     .mini {
       padding: 16px;
     }
