@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <!--
     Ostional.life – Landing Page (Single-file HTML)
@@ -13,7 +14,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Ostional.life | Los Llanos – Spacious Lots Near Nosara & Iconic Beaches</title>
-  <meta name="description" content="Los Llanos is a low-density community in Río Montaña, Costa Rica, offering large flat lots (5,000 m²+) near Nosara, Ostional, and Playa Pelada. Schedule a guided visit via WhatsApp." />
+  <meta name="description"
+    content="Los Llanos is a low-density community in Río Montaña, Costa Rica, offering large flat lots (5,000 m²+) near Nosara, Ostional, and Playa Pelada. Schedule a guided visit via WhatsApp." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
@@ -33,7 +35,8 @@
   <meta property="og:site_name" content="Ostional.life" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Ostional.life | Los Llanos – Spacious Lots Near Nosara & Iconic Beaches" />
-  <meta property="og:description" content="Large flat lots (5,000 m²+) in Río Montaña, Costa Rica. Minutes to Nosara, Ostional, Playa Pelada, Guiones, and San Juanillo. Schedule a guided visit on WhatsApp." />
+  <meta property="og:description"
+    content="Large flat lots (5,000 m²+) in Río Montaña, Costa Rica. Minutes to Nosara, Ostional, Playa Pelada, Guiones, and San Juanillo. Schedule a guided visit on WhatsApp." />
   <meta property="og:url" content="https://ostional.life/" />
   <meta property="og:image" content="https://ostional.life/assets/og/og-cover.jpg" />
   <meta property="og:image:width" content="1200" />
@@ -43,7 +46,8 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ostional.life | Los Llanos – Spacious Lots Near Nosara & Iconic Beaches" />
-  <meta name="twitter:description" content="Large flat lots (5,000 m²+) in Río Montaña, Costa Rica. Schedule a guided visit on WhatsApp." />
+  <meta name="twitter:description"
+    content="Large flat lots (5,000 m²+) in Río Montaña, Costa Rica. Schedule a guided visit on WhatsApp." />
   <meta name="twitter:image" content="https://ostional.life/assets/og/og-cover.jpg" />
 
   <!-- Preconnect for fonts (optional). If you prefer system fonts only, remove these. -->
@@ -92,279 +96,569 @@
   </script>
 
   <style>
-    :root{
-      --bg:#0b1220;
-      --card:#101a2e;
-      --text:#eef3ff;
-      --muted:#a9b4c7;
-      --brand:#2f7dff;
-      --brand2:#35d0ff;
-      --ok:#2fe37a;
-      --warn:#ffce3a;
-      --line: rgba(255,255,255,.10);
-      --shadow: 0 10px 30px rgba(0,0,0,.25);
+    :root {
+      --bg: #0b1220;
+      --card: #101a2e;
+      --text: #eef3ff;
+      --muted: #a9b4c7;
+      --brand: #2f7dff;
+      --brand2: #35d0ff;
+      --ok: #2fe37a;
+      --warn: #ffce3a;
+      --line: rgba(255, 255, 255, .10);
+      --shadow: 0 10px 30px rgba(0, 0, 0, .25);
       --radius: 18px;
       --max: 1120px;
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--text);
-      background:
-        radial-gradient(1200px 500px at 20% 0%, rgba(47,125,255,.25), transparent 60%),
-        radial-gradient(1000px 600px at 80% 0%, rgba(53,208,255,.18), transparent 55%),
-        linear-gradient(180deg, #070b14, var(--bg));
-      line-height:1.5;
+
+    * {
+      box-sizing: border-box
     }
-    a{color:inherit;text-decoration:none}
-    .container{max-width:var(--max); margin:0 auto; padding:0 20px;}
-    .nav{
-      position:sticky; top:0; z-index:50;
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(1200px 500px at 20% 0%, rgba(47, 125, 255, .25), transparent 60%),
+        radial-gradient(1000px 600px at 80% 0%, rgba(53, 208, 255, .18), transparent 55%),
+        linear-gradient(180deg, #070b14, var(--bg));
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
       backdrop-filter: blur(10px);
-      background: rgba(7,11,20,.65);
+      background: rgba(7, 11, 20, .65);
       border-bottom: 1px solid var(--line);
     }
-    .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:14px;}
-    .logo{display:flex; align-items:center; gap:10px; font-weight:900; letter-spacing:.2px;}
-    .mark{
-      width:36px;height:36px;border-radius:12px;
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 14px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: .2px;
+    }
+
+    .mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
       background: linear-gradient(135deg, var(--brand), var(--brand2));
       box-shadow: var(--shadow);
-      flex:0 0 auto;
+      flex: 0 0 auto;
     }
-    .nav-links{display:flex; gap:10px; align-items:center; color:var(--muted); font-weight:700; flex-wrap:wrap}
-    .nav-links a{padding:10px 10px; border-radius:12px}
-    .nav-links a:hover{background:rgba(255,255,255,.06); color:var(--text)}
-    .nav-ctas{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
 
-    .btn{
-      display:inline-flex; gap:10px; align-items:center; justify-content:center;
-      padding:12px 14px; border-radius:14px; font-weight:900;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-      box-shadow: 0 8px 18px rgba(0,0,0,.18);
-      cursor:pointer;
-      transition:.18s ease;
-      white-space:nowrap;
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: var(--muted);
+      font-weight: 700;
+      flex-wrap: wrap
     }
-    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.09)}
-    .btn.primary{
+
+    .nav-links a {
+      padding: 10px 10px;
+      border-radius: 12px
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, .06);
+      color: var(--text)
+    }
+
+    .nav-ctas {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    .btn {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 14px;
+      border-radius: 14px;
+      font-weight: 900;
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: rgba(255, 255, 255, .06);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, .18);
+      cursor: pointer;
+      transition: .18s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      background: rgba(255, 255, 255, .09)
+    }
+
+    .btn.primary {
       background: linear-gradient(135deg, var(--brand), var(--brand2));
-      border: 1px solid rgba(255,255,255,.18);
+      border: 1px solid rgba(255, 255, 255, .18);
     }
-    .btn.primary:hover{filter:saturate(1.1)}
-    .btn.whatsapp{
-      background: linear-gradient(135deg, #25D366, #1bbf5b);
-      border: 1px solid rgba(255,255,255,.18);
-    }
-    .btn.small{padding:10px 12px; font-size:14px; border-radius:12px}
 
-    .hero{padding: 44px 0 18px;}
-    .grid{
-      display:grid;
+    .btn.primary:hover {
+      filter: saturate(1.1)
+    }
+
+    .btn.whatsapp {
+      background: linear-gradient(135deg, #25D366, #1bbf5b);
+      border: 1px solid rgba(255, 255, 255, .18);
+    }
+
+    .btn.small {
+      padding: 10px 12px;
+      font-size: 14px;
+      border-radius: 12px
+    }
+
+    .hero {
+      padding: 44px 0 18px;
+    }
+
+    .grid {
+      display: grid;
       grid-template-columns: 1.25fr .85fr;
-      gap:26px;
-      align-items:start;
+      gap: 26px;
+      align-items: start;
     }
-    .badge{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:8px 12px;
-      border-radius:999px;
-      background: rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.10);
-      color:var(--muted);
-      font-weight:800;
-      font-size:13px;
+
+    .badge {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .10);
+      color: var(--muted);
+      font-weight: 800;
+      font-size: 13px;
     }
-    h1{
+
+    h1 {
       font-size: clamp(34px, 4.2vw, 56px);
-      line-height:1.05;
-      margin:14px 0 12px;
-      letter-spacing:-.6px;
+      line-height: 1.05;
+      margin: 14px 0 12px;
+      letter-spacing: -.6px;
     }
-    .sub{
-      color:var(--muted);
+
+    .sub {
+      color: var(--muted);
       font-size: clamp(15px, 1.6vw, 18px);
       max-width: 62ch;
-      margin:0 0 18px;
+      margin: 0 0 18px;
     }
-    .hero-cta{display:flex; gap:12px; flex-wrap:wrap; margin: 18px 0 14px;}
-    .stats{
-      display:grid; grid-template-columns: repeat(3, minmax(0,1fr));
-      gap:12px; margin-top:16px;
-    }
-    .stat{
-      background: rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.10);
-      border-radius: var(--radius);
-      padding:14px;
-    }
-    .stat b{font-size:20px}
-    .stat span{display:block; color:var(--muted); font-weight:750; margin-top:6px; font-size:13px}
 
-    .card{
-      background: rgba(16,26,46,.65);
-      border:1px solid rgba(255,255,255,.10);
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 18px 0 14px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .stat {
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .10);
+      border-radius: var(--radius);
+      padding: 14px;
+    }
+
+    .stat b {
+      font-size: 20px
+    }
+
+    .stat span {
+      display: block;
+      color: var(--muted);
+      font-weight: 750;
+      margin-top: 6px;
+      font-size: 13px
+    }
+
+    .card {
+      background: rgba(16, 26, 46, .65);
+      border: 1px solid rgba(255, 255, 255, .10);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
-    .leadform{padding:16px;}
-    .leadform h2{margin:4px 0 8px; font-size:18px}
-    .leadform p{margin:0 0 12px; color:var(--muted); font-size:13.5px}
-    .field{display:flex; flex-direction:column; gap:6px; margin:10px 0}
-    label{color:var(--muted); font-weight:800; font-size:13px}
-    input, select, textarea{
-      padding:12px 12px;
-      border-radius:14px;
-      background: rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
-      color:var(--text);
-      outline:none;
-    }
-    textarea{min-height:92px; resize:vertical}
-    .row{display:grid; grid-template-columns: 1fr 1fr; gap:10px}
-    .fine{margin-top:10px; color:rgba(255,255,255,.55); font-size:12px;}
 
-    section{padding: 34px 0}
-    .section-title{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; margin-bottom:16px}
-    .section-title h2{margin:0; font-size:26px; letter-spacing:-.2px}
-    .section-title p{margin:6px 0 0; color:var(--muted); max-width:70ch}
+    .leadform {
+      padding: 16px;
+    }
 
-    .cards{
-      display:grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap:14px;
+    .leadform h2 {
+      margin: 4px 0 8px;
+      font-size: 18px
     }
-    .mini{padding:16px;}
-    .mini h3{margin:0 0 8px; font-size:16px}
-    .mini p{margin:0; color:var(--muted); font-size:14px}
 
-    .availability{
-      display:grid; grid-template-columns: 1.1fr .9fr; gap:14px;
+    .leadform p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 13.5px
     }
-    table{
-      width:100%;
-      border-collapse:separate;
-      border-spacing:0;
-      overflow:hidden;
-      border-radius: var(--radius);
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-    }
-    th, td{padding:12px 12px; text-align:left; font-size:14px}
-    th{color:rgba(255,255,255,.75); background: rgba(255,255,255,.05)}
-    tr + tr td{border-top:1px solid rgba(255,255,255,.08)}
-    .tag{
-      display:inline-flex; align-items:center; gap:6px;
-      padding:6px 10px; border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
-      color:rgba(255,255,255,.86);
-      font-weight:900; font-size:12px;
-    }
-    .tag.ok{border-color:rgba(47,227,122,.35); background:rgba(47,227,122,.10)}
-    .tag.warn{border-color:rgba(255,206,58,.35); background:rgba(255,206,58,.10)}
 
-    .media{
-      display:grid;
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 10px 0
+    }
+
+    label {
+      color: var(--muted);
+      font-weight: 800;
+      font-size: 13px
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 12px 12px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .12);
+      color: var(--text);
+      outline: none;
+    }
+
+    textarea {
+      min-height: 92px;
+      resize: vertical
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px
+    }
+
+    .fine {
+      margin-top: 10px;
+      color: rgba(255, 255, 255, .55);
+      font-size: 12px;
+    }
+
+    section {
+      padding: 34px 0
+    }
+
+    .section-title {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: -.2px
+    }
+
+    .section-title p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      max-width: 70ch
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .mini {
+      padding: 16px;
+    }
+
+    .mini h3 {
+      margin: 0 0 8px;
+      font-size: 16px
+    }
+
+    .mini p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    .availability {
+      display: grid;
       grid-template-columns: 1.1fr .9fr;
-      gap:14px;
-      align-items:start;
+      gap: 14px;
     }
-    figure{margin:0}
-    .img{
-      width:100%;
-      height:auto;
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
       border-radius: var(--radius);
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-      display:block;
+      border: 1px solid rgba(255, 255, 255, .10);
+      background: rgba(255, 255, 255, .03);
     }
-    .ph{
+
+    th,
+    td {
+      padding: 12px 12px;
+      text-align: left;
+      font-size: 14px
+    }
+
+    th {
+      color: rgba(255, 255, 255, .75);
+      background: rgba(255, 255, 255, .05)
+    }
+
+    tr+tr td {
+      border-top: 1px solid rgba(255, 255, 255, .08)
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: rgba(255, 255, 255, .05);
+      color: rgba(255, 255, 255, .86);
+      font-weight: 900;
+      font-size: 12px;
+    }
+
+    .tag.ok {
+      border-color: rgba(47, 227, 122, .35);
+      background: rgba(47, 227, 122, .10)
+    }
+
+    .tag.warn {
+      border-color: rgba(255, 206, 58, .35);
+      background: rgba(255, 206, 58, .10)
+    }
+
+    .media {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    figure {
+      margin: 0
+    }
+
+    .img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, .10);
+      background: rgba(255, 255, 255, .04);
+      display: block;
+    }
+
+    .ph {
       aspect-ratio: 16/10;
       border-radius: var(--radius);
-      border:1px dashed rgba(255,255,255,.22);
-      background: rgba(255,255,255,.04);
-      display:flex; align-items:center; justify-content:center;
-      color:rgba(255,255,255,.60);
-      font-weight:900;
+      border: 1px dashed rgba(255, 255, 255, .22);
+      background: rgba(255, 255, 255, .04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, .60);
+      font-weight: 900;
     }
 
-    .gallery{
-      display:grid;
-      grid-template-columns: repeat(12, minmax(0,1fr));
-      gap:12px;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 12px;
     }
-    .g1{grid-column: span 6;}
-    .g2{grid-column: span 3;}
-    .g3{grid-column: span 3;}
-    .g4{grid-column: span 4;}
-    .g5{grid-column: span 4;}
-    .g6{grid-column: span 4;}
 
-    details{
+    .g1 {
+      grid-column: span 6;
+    }
+
+    .g2 {
+      grid-column: span 3;
+    }
+
+    .g3 {
+      grid-column: span 3;
+    }
+
+    .g4 {
+      grid-column: span 4;
+    }
+
+    .g5 {
+      grid-column: span 4;
+    }
+
+    .g6 {
+      grid-column: span 4;
+    }
+
+    details {
       border-radius: var(--radius);
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      padding:14px 14px;
+      border: 1px solid rgba(255, 255, 255, .10);
+      background: rgba(255, 255, 255, .03);
+      padding: 14px 14px;
     }
-    details + details{margin-top:10px}
-    summary{cursor:pointer; font-weight:950}
-    summary::marker{color:rgba(255,255,255,.50)}
 
-    .cta-band{
+    details+details {
+      margin-top: 10px
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 950
+    }
+
+    summary::marker {
+      color: rgba(255, 255, 255, .50)
+    }
+
+    .cta-band {
       padding: 18px;
-      background: linear-gradient(135deg, rgba(47,125,255,.22), rgba(53,208,255,.14));
-      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(135deg, rgba(47, 125, 255, .22), rgba(53, 208, 255, .14));
+      border: 1px solid rgba(255, 255, 255, .10);
       border-radius: var(--radius);
     }
-    footer{
+
+    footer {
       padding: 22px 0 40px;
-      color:rgba(255,255,255,.60);
-      border-top: 1px solid rgba(255,255,255,.08);
+      color: rgba(255, 255, 255, .60);
+      border-top: 1px solid rgba(255, 255, 255, .08);
       margin-top: 18px;
     }
-    .footer-grid{display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap}
 
-    .toast{
+    .footer-grid {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap
+    }
+
+    .toast {
       position: fixed;
-      bottom: 18px; left: 50%;
+      bottom: 18px;
+      left: 50%;
       transform: translateX(-50%);
-      background: rgba(10,14,26,.92);
-      border:1px solid rgba(255,255,255,.12);
+      background: rgba(10, 14, 26, .92);
+      border: 1px solid rgba(255, 255, 255, .12);
       color: var(--text);
       padding: 12px 14px;
       border-radius: 999px;
       box-shadow: var(--shadow);
-      display:none;
-      z-index:100;
-      font-weight:900;
+      display: none;
+      z-index: 100;
+      font-weight: 900;
     }
 
     /* Accessibility helpers */
-    .sr-only{
-      position:absolute;
-      width:1px;height:1px;
-      padding:0;margin:-1px;
-      overflow:hidden;clip:rect(0,0,0,0);
-      white-space:nowrap;border:0;
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
-    @media (max-width: 980px){
-      .grid{grid-template-columns: 1fr}
-      .stats{grid-template-columns: repeat(3, minmax(0,1fr))}
-      .availability{grid-template-columns: 1fr}
-      .media{grid-template-columns: 1fr}
-      .cards{grid-template-columns: 1fr}
-      .row{grid-template-columns: 1fr}
-      .nav-links{display:none}
-      .gallery{grid-template-columns: repeat(6, minmax(0,1fr))}
-      .g1{grid-column: span 6;}
-      .g2{grid-column: span 3;}
-      .g3{grid-column: span 3;}
-      .g4,.g5,.g6{grid-column: span 6;}
+    @media (max-width: 980px) {
+      .grid {
+        grid-template-columns: 1fr
+      }
+
+      .stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+      }
+
+      .availability {
+        grid-template-columns: 1fr
+      }
+
+      .media {
+        grid-template-columns: 1fr
+      }
+
+      .cards {
+        grid-template-columns: 1fr
+      }
+
+      .row {
+        grid-template-columns: 1fr
+      }
+
+      .nav-links {
+        display: none
+      }
+
+      .gallery {
+        grid-template-columns: repeat(6, minmax(0, 1fr))
+      }
+
+      .g1 {
+        grid-column: span 6;
+      }
+
+      .g2 {
+        grid-column: span 3;
+      }
+
+      .g3 {
+        grid-column: span 3;
+      }
+
+      .g4,
+      .g5,
+      .g6 {
+        grid-column: span 6;
+      }
     }
   </style>
 </head>
@@ -377,7 +671,8 @@
     <div class="container nav-inner">
       <a class="logo" href="#top" aria-label="Ostional.life Home">
         <!-- <span class="mark" aria-hidden="true"></span> -->
-        <img style="width: 36px; height: 36px;" src="/assets/icons/logo.png" alt="logo" loading="lazy" decoding="async" />
+        <img style="width: 36px; height: 36px;" src="/assets/icons/logo.png" alt="logo" loading="lazy"
+          decoding="async" />
         <span>Ostional<span style="color:var(--muted)">.life</span></span>
       </a>
 
@@ -410,12 +705,15 @@
           <h1>Live the Ostional Life — spacious land, nature, and beaches nearby.</h1>
 
           <p class="sub">
-            A low-density community in <strong>Río Montaña, Guanacaste</strong>, featuring large <strong>flat lots starting at 5,000 m²</strong>.
-            Designed for <strong>retirement</strong>, <strong>wellness</strong>, and <strong>families</strong> seeking peace—minutes from Nosara and iconic beaches.
+            A low-density community in <strong>Río Montaña, Guanacaste</strong>, featuring large <strong>flat lots
+              starting at 5,000 m²</strong>.
+            Designed for <strong>retirement</strong>, <strong>wellness</strong>, and <strong>families</strong> seeking
+            peace—minutes from Nosara and iconic beaches.
           </p>
 
           <div class="hero-cta">
-            <a class="btn primary" href="#contact" aria-label="Schedule a guided visit via WhatsApp">Schedule a guided visit</a>
+            <a class="btn primary" href="#contact" aria-label="Schedule a guided visit via WhatsApp">Schedule a guided
+              visit</a>
             <a class="btn" href="#availability" aria-label="See current availability">See availability</a>
           </div>
 
@@ -454,7 +752,8 @@
               </div>
               <div class="field">
                 <label for="phone">Phone</label>
-                <input id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+1 / +506 ..." required />
+                <input id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+1 / +506 ..."
+                  required />
               </div>
             </div>
 
@@ -479,13 +778,15 @@
 
             <div class="field">
               <label for="message">What are you looking for?</label>
-              <textarea id="message" name="message" placeholder="Example: retirement home, wellness retreat, home + garden, close to beaches..."></textarea>
+              <textarea id="message" name="message"
+                placeholder="Example: retirement home, wellness retreat, home + garden, close to beaches..."></textarea>
             </div>
 
             <button class="btn primary" type="submit" style="width:100%">Send via WhatsApp</button>
 
             <div class="fine">
-              By submitting, you agree to be contacted to receive information about the project. Availability subject to change.
+              By submitting, you agree to be contacted to receive information about the project. Availability subject to
+              change.
             </div>
 
             <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
@@ -499,7 +800,9 @@
       <!-- Hero image (replace src) -->
       <div class="container" style="margin-top:22px">
         <figure aria-label="Hero lifestyle image">
-          <img class="img" src="/assets/images/hero.jpg" alt="Lifestyle near Ostional: nature, beaches, and peaceful living in Guanacaste, Costa Rica." loading="eager" decoding="async" />
+          <img class="img" src="/assets/images/hero.jpg"
+            alt="Lifestyle near Ostional: nature, beaches, and peaceful living in Guanacaste, Costa Rica."
+            loading="eager" decoding="async" />
         </figure>
       </div>
     </section>
@@ -511,7 +814,8 @@
           <div>
             <h2>Perfectly located near Costa Rica’s most iconic beaches</h2>
             <p>
-              Los Llanos is located in Río Montaña, Guanacaste—offering privacy and nature while staying close to vibrant beach towns and international communities.
+              Los Llanos is located in Río Montaña, Guanacaste—offering privacy and nature while staying close to
+              vibrant beach towns and international communities.
             </p>
           </div>
         </div>
@@ -520,7 +824,8 @@
           <div class="card mini">
             <h3>Minutes to key destinations</h3>
             <p style="margin-bottom:12px">
-              Easy access to Nosara, surf beaches, and nature experiences—ideal for a calm lifestyle without feeling isolated.
+              Easy access to Nosara, surf beaches, and nature experiences—ideal for a calm lifestyle without feeling
+              isolated.
             </p>
 
             <div class="cards" style="grid-template-columns: 1fr; gap:10px">
@@ -562,7 +867,8 @@
           <div>
             <h2>A lifestyle focused on wellness, nature, and simplicity</h2>
             <p>
-              Life in Río Montaña is about space, calm, and connection to nature—near a multicultural beach area with organic markets and a healthy pace of life.
+              Life in Río Montaña is about space, calm, and connection to nature—near a multicultural beach area with
+              organic markets and a healthy pace of life.
             </p>
           </div>
         </div>
@@ -571,8 +877,10 @@
           <div class="card mini">
             <h3>Why people choose this area</h3>
             <p>
-              This region is part of Costa Rica’s <strong>Blue Zone</strong> context—often associated with healthy living, outdoor routines, and community-centered lifestyles.
-              It’s a great fit for those who want to slow down while staying close to world-class beaches and an international atmosphere.
+              This region is part of Costa Rica’s <strong>Blue Zone</strong> context—often associated with healthy
+              living, outdoor routines, and community-centered lifestyles.
+              It’s a great fit for those who want to slow down while staying close to world-class beaches and an
+              international atmosphere.
             </p>
             <ul style="margin:12px 0 0; color:var(--muted); font-weight:750">
               <li>Peaceful, nature-oriented living</li>
@@ -583,7 +891,8 @@
           </div>
 
           <figure aria-label="Lifestyle image">
-            <img style="height: 258px; width: fit-content;" class="img" src="/assets/images/lifestyle.png" alt="Wellness and lifestyle near Nosara and Ostional, Costa Rica." loading="lazy" decoding="async" />
+            <img style="height: 258px; width: fit-content;" class="img" src="/assets/images/lifestyle.png"
+              alt="Wellness and lifestyle near Nosara and Ostional, Costa Rica." loading="lazy" decoding="async" />
           </figure>
         </div>
       </div>
@@ -596,7 +905,8 @@
           <div>
             <h2>Los Llanos — Large flat lots in a low-density community</h2>
             <p>
-              A boutique development of only 8 spacious lots designed to provide privacy, flexibility, and room to create your ideal home.
+              A boutique development of only 8 spacious lots designed to provide privacy, flexibility, and room to
+              create your ideal home.
             </p>
           </div>
         </div>
@@ -608,7 +918,8 @@
               <li>Lots starting at <strong>5,000 m²+</strong></li>
               <li><strong>Flat topography</strong> (great for building & gardens)</li>
               <li><strong>Low-density layout</strong> (privacy & peace)</li>
-              <li>Ideal for <strong>retirement</strong>, <strong>wellness</strong>, or <strong>family living</strong></li>
+              <li>Ideal for <strong>retirement</strong>, <strong>wellness</strong>, or <strong>family living</strong>
+              </li>
             </ul>
 
             <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
@@ -624,7 +935,8 @@
           <div class="card mini" aria-label="Availability callout" style="min-height: 258px;">
             <h3>Want the best fit?</h3>
             <p>
-              Tell us what you’re building (retirement home, wellness retreat, home + garden) and we’ll suggest the most suitable lots.
+              Tell us what you’re building (retirement home, wellness retreat, home + garden) and we’ll suggest the most
+              suitable lots.
             </p>
             <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
               <a class="btn whatsapp" id="waAvailability" href="#">Message us on WhatsApp</a>
@@ -637,15 +949,15 @@
 
     <!-- AVAILABILITY -->
     <section id="availability" aria-label="Availability section">
-      <div class="container availability">
-        <div>
-          <div class="section-title">
-            <div>
-              <h2>Current availability</h2>
-              <p>Only 8 lots total. Lots 7 and 8 are currently reserved.</p>
-            </div>
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Current availability</h2>
+            <p>Only 8 lots total. Lots 7 and 8 are currently reserved.</p>
           </div>
+        </div>
 
+        <div class="media">
           <table aria-label="Availability table">
             <thead>
               <tr>
@@ -654,32 +966,64 @@
               </tr>
             </thead>
             <tbody>
-              <tr><td>Lot 1</td><td><span class="tag ok">Available</span></td></tr>
-              <tr><td>Lot 2</td><td><span class="tag ok">Available</span></td></tr>
-              <tr><td>Lot 3</td><td><span class="tag ok">Available</span></td></tr>
-              <tr><td>Lot 4</td><td><span class="tag ok">Available</span></td></tr>
-              <tr><td>Lot 5</td><td><span class="tag ok">Available</span></td></tr>
-              <tr><td>Lot 6</td><td><span class="tag ok">Available</span></td></tr>
-              <tr><td>Lot 7</td><td><span class="tag warn">Reserved</span></td></tr>
-              <tr><td>Lot 8</td><td><span class="tag warn">Reserved</span></td></tr>
+              <tr>
+                <td>Lot 1</td>
+                <td><span class="tag ok">Available</span></td>
+              </tr>
+              <tr>
+                <td>Lot 2</td>
+                <td><span class="tag ok">Available</span></td>
+              </tr>
+              <tr>
+                <td>Lot 3</td>
+                <td><span class="tag ok">Available</span></td>
+              </tr>
+              <tr>
+                <td>Lot 4</td>
+                <td><span class="tag ok">Available</span></td>
+              </tr>
+              <tr>
+                <td>Lot 5</td>
+                <td><span class="tag ok">Available</span></td>
+              </tr>
+              <tr>
+                <td>Lot 6</td>
+                <td><span class="tag ok">Available</span></td>
+              </tr>
+              <tr>
+                <td>Lot 7</td>
+                <td><span class="tag warn">Reserved</span></td>
+              </tr>
+              <tr>
+                <td>Lot 8</td>
+                <td><span class="tag warn">Reserved</span></td>
+              </tr>
             </tbody>
           </table>
 
-          <p style="margin-top:10px; color:rgba(255,255,255,.60); font-size:12px">
-            Availability may change. Please contact us to confirm the latest status.
-          </p>
+          <figure aria-label="Legal documents image">
+            <!-- <img class="img" src="/assets/images/legal.png" alt="Symbolic image representing clear legal documentation for property ownership." loading="lazy" decoding="async" /> -->
+            <img class="img" src="/assets/images/croquis.png"
+              alt="Los Llanos site plan showing 8 lots and current availability." loading="lazy" decoding="async" />
+          </figure>
+
         </div>
 
         <div class="stack" style="display:grid; gap:14px">
           <figure aria-label="Los Llanos site plan">
-            <img class="img" style="padding-top: 80px;" src="/assets/images/croquis.png" alt="Los Llanos site plan showing 8 lots and current availability." loading="lazy" decoding="async" />
+            <img class="img" style="padding-top: 80px;" src="/assets/images/croquis.png"
+              alt="Los Llanos site plan showing 8 lots and current availability." loading="lazy" decoding="async" />
           </figure>
 
           <!-- <figure aria-label="Photo of the lots">
             <img class="img" src="https://placehold.co/600x400" alt="Photo of flat spacious lots at Los Llanos in Río Montaña, Guanacaste." loading="lazy" decoding="async" />
           </figure> -->
         </div>
-        
+
+        <p style="margin-top:10px; color:rgba(255,255,255,.60); font-size:12px">
+          Availability may change. Please contact us to confirm the latest status.
+        </p>
+
       </div>
     </section>
 
@@ -736,7 +1080,8 @@
           <div class="card mini">
             <h3>Delivered with secure documentation</h3>
             <p>
-              Each lot is delivered with its own registered property number (<em>finca</em>) and cadastral plan, fully compliant with Costa Rican regulations.
+              Each lot is delivered with its own registered property number (<em>finca</em>) and cadastral plan, fully
+              compliant with Costa Rican regulations.
             </p>
             <ul style="margin:12px 0 0; color:var(--muted); font-weight:750">
               <li>Registered finca + cadastral plan</li>
@@ -747,7 +1092,9 @@
           </div>
 
           <figure aria-label="Legal documents image">
-            <img class="img" src="/assets/images/legal.png" alt="Symbolic image representing clear legal documentation for property ownership." loading="lazy" decoding="async" />
+            <img class="img" src="/assets/images/legal.png"
+              alt="Symbolic image representing clear legal documentation for property ownership." loading="lazy"
+              decoding="async" />
           </figure>
         </div>
       </div>
@@ -781,7 +1128,9 @@
           </div>
 
           <figure aria-label="Lifestyle people image">
-            <img class="img" src="/assets/images/qualifier.png" alt="People enjoying a calm lifestyle near nature in Guanacaste, Costa Rica." loading="lazy" decoding="async" />
+            <img class="img" src="/assets/images/qualifier.png"
+              alt="People enjoying a calm lifestyle near nature in Guanacaste, Costa Rica." loading="lazy"
+              decoding="async" />
           </figure>
         </div>
       </div>
@@ -814,7 +1163,8 @@
           </div>
 
           <figure aria-label="Guided visit image">
-            <img class="img" src="/assets/images/guided-visit.jpg" alt="Guided visit through the property in Río Montaña, Guanacaste." loading="lazy" decoding="async" />
+            <img class="img" src="/assets/images/guided-visit.jpg"
+              alt="Guided visit through the property in Río Montaña, Guanacaste." loading="lazy" decoding="async" />
           </figure>
         </div>
       </div>
@@ -826,20 +1176,27 @@
         <div class="section-title">
           <div>
             <h2>Experience the surroundings</h2>
-            <p>A visual glimpse of the land, nearby river, beaches, and the lifestyle that defines life in Río Montaña.</p>
+            <p>A visual glimpse of the land, nearby river, beaches, and the lifestyle that defines life in Río Montaña.
+            </p>
           </div>
         </div>
 
         <div class="gallery" role="list">
           <!-- Replace with real images (8–12 recommended) -->
-          <img class="img g1" role="listitem" src="/assets/gallery/Ostional1.jpeg" alt="Playa Ostional coastline." loading="lazy" decoding="async" />
-          <img class="img g2" role="listitem" src="/assets/gallery/Ostional2.jpeg" alt="Playa Ostional coastline." loading="lazy" decoding="async" />
-          
-          <img class="img g3" role="listitem" src="/assets/gallery/Guiones.jpeg" alt="Playa Guiones / surf lifestyle." loading="lazy" decoding="async" />
-          <img class="img g4" role="listitem" src="/assets/gallery/Peladas.jpeg" alt="Playa Pelada / Nosara area." loading="lazy" decoding="async" />
-          
-          <img class="img g5" role="listitem" src="/assets/gallery/SanJuanillo1.jpeg" alt="Playa San Juanillo" loading="lazy" decoding="async" />
-          <img class="img g6" role="listitem" src="/assets/gallery/SanJuanillo2.jpeg" alt="Playa San Juanillo" loading="lazy" decoding="async" />
+          <img class="img g1" role="listitem" src="/assets/gallery/Ostional1.jpeg" alt="Playa Ostional coastline."
+            loading="lazy" decoding="async" />
+          <img class="img g2" role="listitem" src="/assets/gallery/Ostional2.jpeg" alt="Playa Ostional coastline."
+            loading="lazy" decoding="async" />
+
+          <img class="img g3" role="listitem" src="/assets/gallery/Guiones.jpeg" alt="Playa Guiones / surf lifestyle."
+            loading="lazy" decoding="async" />
+          <img class="img g4" role="listitem" src="/assets/gallery/Peladas.jpeg" alt="Playa Pelada / Nosara area."
+            loading="lazy" decoding="async" />
+
+          <img class="img g5" role="listitem" src="/assets/gallery/SanJuanillo1.jpeg" alt="Playa San Juanillo"
+            loading="lazy" decoding="async" />
+          <img class="img g6" role="listitem" src="/assets/gallery/SanJuanillo2.jpeg" alt="Playa San Juanillo"
+            loading="lazy" decoding="async" />
         </div>
 
         <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
@@ -870,13 +1227,13 @@
             <h3>Las Brisas — <span class="tag warn">Sold Out</span></h3>
             <p>Sold-out community near Ostional.</p>
             <!-- <div class="ph" style="margin-top:12px">[Las Brisas image]</div> -->
-             <img class="img" src="/assets/images/las-brisas.png" alt="Las Brisas" loading="lazy" decoding="async" />
+            <img class="img" src="/assets/images/las-brisas.png" alt="Las Brisas" loading="lazy" decoding="async" />
           </div>
           <div class="card mini">
             <h3>Los Llanos — <span class="tag ok">Available</span></h3>
             <p>Spacious lots (5,000 m²+) in a low-density community.</p>
             <!-- <div class="ph" style="margin-top:12px">[Los Llanos image]</div> -->
-             <img class="img" src="/assets/images/los-llanos.png" alt="Los LLanos" loading="lazy" decoding="async" />
+            <img class="img" src="/assets/images/los-llanos.png" alt="Los LLanos" loading="lazy" decoding="async" />
           </div>
         </div>
 
@@ -914,21 +1271,24 @@
         <details>
           <summary>What utilities are available?</summary>
           <div style="color:var(--muted); margin-top:10px">
-            Water via ASADA Ostional. Electricity through Coopeguanacaste (power line installation required). Mobile coverage by Kölbi and Claro. Internet via Starlink.
+            Water via ASADA Ostional. Electricity through Coopeguanacaste (power line installation required). Mobile
+            coverage by Kölbi and Claro. Internet via Starlink.
           </div>
         </details>
 
         <details>
           <summary>Can foreigners buy property in Costa Rica?</summary>
           <div style="color:var(--muted); margin-top:10px">
-            Yes—foreigners can own property in Costa Rica with the same ownership rights as locals. We can share the recommended process and contacts.
+            Yes—foreigners can own property in Costa Rica with the same ownership rights as locals. We can share the
+            recommended process and contacts.
           </div>
         </details>
 
         <details>
           <summary>What can I build on the lot?</summary>
           <div style="color:var(--muted); margin-top:10px">
-            The lots have mixed-use zoning and are ideal for a home with garden/orchard style living. We’ll share the practical guidelines and local considerations.
+            The lots have mixed-use zoning and are ideal for a home with garden/orchard style living. We’ll share the
+            practical guidelines and local considerations.
           </div>
         </details>
       </div>
@@ -942,7 +1302,8 @@
             <div>
               <h2 style="margin:0">Schedule your guided visit to Los Llanos</h2>
               <p style="margin:6px 0 0; color:var(--muted)">
-                Discover a peaceful lifestyle near Costa Rica’s most iconic beaches. Contact us to receive full details and schedule a private visit.
+                Discover a peaceful lifestyle near Costa Rica’s most iconic beaches. Contact us to receive full details
+                and schedule a private visit.
               </p>
             </div>
             <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center">
@@ -971,10 +1332,12 @@
     <div class="container footer-grid">
       <div style="display:flex; gap:10px; align-items:center">
         <!-- <span class="mark" style="width:28px;height:28px;border-radius:10px" aria-hidden="true"></span> -->
-        <img style="width: 36px; height: 36px;" src="/assets/icons/logo.png" alt="logo" loading="lazy" decoding="async" />
+        <img style="width: 36px; height: 36px;" src="/assets/icons/logo.png" alt="logo" loading="lazy"
+          decoding="async" />
         <div>
           <div style="font-weight:950; color:rgba(255,255,255,.85)">Ostional.life</div>
-          <div style="font-size:12px; color:rgba(255,255,255,.55)">© <span id="year"></span> • Río Montaña, Guanacaste • All rights reserved</div>
+          <div style="font-size:12px; color:rgba(255,255,255,.55)">© <span id="year"></span> • Río Montaña, Guanacaste •
+            All rights reserved</div>
         </div>
       </div>
 
@@ -1019,15 +1382,15 @@
     document.getElementById("year").textContent = new Date().getFullYear();
 
     // Wire call links (redundant but safe if you change phone)
-    ["callTop","callCard","callBottom"].forEach(id => {
+    ["callTop", "callCard", "callBottom"].forEach(id => {
       const el = document.getElementById(id);
       if (el) el.href = "tel:+" + CONFIG.phoneNumber;
     });
 
     // Wire WhatsApp buttons
     const waButtons = [
-      "waTop","waCard","waLocation","waLosLlanos","waAvailability",
-      "waPurchase","waGallery","waSold","waBottom","waFooter"
+      "waTop", "waCard", "waLocation", "waLosLlanos", "waAvailability",
+      "waPurchase", "waGallery", "waSold", "waBottom", "waFooter"
     ];
     waButtons.forEach(id => {
       const el = document.getElementById(id);
@@ -1049,7 +1412,7 @@
       const message = (data.get("message") || "").toString().trim();
 
       const text =
-`Hi! I’m interested in ${CONFIG.projectName}.
+        `Hi! I’m interested in ${CONFIG.projectName}.
 Name: ${name}
 Phone: ${phone}
 Interest: ${interest}
@@ -1064,4 +1427,5 @@ Please share full details and help me schedule a guided visit.`;
     });
   </script>
 </body>
+
 </html>
