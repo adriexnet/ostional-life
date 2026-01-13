@@ -523,6 +523,23 @@
       font-weight: 900;
     }
 
+    /* Responsive Google Maps embed */
+    .map-embed {
+      aspect-ratio: 16/10;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.10);
+      background: none;
+      display:block;
+    }
+
+    .map-embed iframe {
+      width:100%;
+      height:100%;
+      border:0;
+      display:block;
+    }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -865,12 +882,49 @@
           </div>
 
           <figure class="card mini" aria-label="Map preview">
-            <!-- Replace with Google Maps embed OR an image screenshot with a link -->
-            <div class="ph">[Map embed / screenshot goes here]</div>
+            <!-- Interactive Google Maps (JS API) with marker. Replace 'YOUR_API_KEY' below with a real API key. If absent, a fallback iframe is used. -->
+            <div class="map-embed" role="region" aria-label="Map — Ostional, Costa Rica">
+              <div id="map" aria-hidden="false"></div>
+              <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=9.9731,-85.6667" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+            </div>
             <p style="color:var(--muted); margin:10px 0 0; font-size:13px">
-              Tip: Embed Google Maps or add a clickable screenshot that opens the map in a new tab.
+              Tip: Click the map or the button to open it in Google Maps. To enable the interactive map, replace <code>YOUR_API_KEY</code> in the script below with your Google Maps JavaScript API key.
             </p>
           </figure>
+
+          <script>
+            /* Map initialization: center on Ostional, Costa Rica */
+            function initMap(){
+              const center = { lat: 9.9731, lng: -85.6667 };
+              const mapEl = document.getElementById('map');
+              // Create a map and place a marker
+              const map = new google.maps.Map(mapEl, {
+                center,
+                zoom: 13,
+                mapTypeControl: false,
+                streetViewControl: false
+              });
+              new google.maps.Marker({ position: center, map, title: 'Ostional, Costa Rica' });
+            }
+
+            (function loadGoogleMaps(){
+              var API_KEY = 'YOUR_API_KEY'; // <-- replace this with your key
+              var mapEl = document.getElementById('map');
+              if(!API_KEY || API_KEY === 'YOUR_API_KEY'){
+                // Fallback to simple iframe (no API key required)
+                mapEl.innerHTML = '<iframe src="https://www.google.com/maps?q=9.9731,-85.6667&z=13&output=embed" loading="lazy" title="Ostional, Costa Rica" style="width:100%;height:100%;border:0"></iframe>';
+                return;
+              }
+
+              // Load Google Maps JS API with callback
+              window.initMap = initMap;
+              var s = document.createElement('script');
+              s.src = 'https://maps.googleapis.com/maps/api/js?key=' + API_KEY + '&callback=initMap';
+              s.defer = true;
+              s.async = true;
+              document.head.appendChild(s);
+            })();
+          </script>
         </div>
       </div>
     </section>
