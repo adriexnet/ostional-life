@@ -1,6 +1,7 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Ostional.life",
+    "short_name": "Ostional",
+    "description": "Los Llanos — Spacious lots near Nosara, Ostional and Playa Pelada.",
     "icons": [
         {
             "src": "/icons/android-chrome-192x192.png",
@@ -13,7 +14,8 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+    "theme_color": "#0b1220",
+    "background_color": "#101a2e",
+    "display": "standalone",
+    "categories": ["real_estate","lifestyle"]
 }
