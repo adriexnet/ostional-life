@@ -763,6 +763,58 @@
         grid-column: span 6;
       }
     }
+
+    /* Image lightbox styles */
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.75);
+      z-index: 200;
+      padding: 20px;
+    }
+
+    .lightbox-overlay.active {
+      display: flex;
+    }
+
+    .lightbox {
+      position: relative;
+      max-width: calc(100% - 40px);
+      max-height: calc(100% - 40px);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: black;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(255,255,255,0.06);
+      border: none;
+      color: var(--text);
+      font-weight: 900;
+      padding: 8px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      z-index: 210;
+    }
+
+    .lightbox-close:hover { background: rgba(255,255,255,0.12); }
   </style>
 </head>
 
@@ -1507,6 +1559,14 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+  <!-- Image lightbox / modal -->
+  <div id="lightboxOverlay" class="lightbox-overlay" aria-hidden="true">
+    <div class="lightbox" role="dialog" aria-modal="true">
+      <button id="lightboxClose" class="lightbox-close" aria-label="Close image">✕</button>
+      <img id="lightboxImage" src="" alt="" />
+    </div>
+  </div>
+
   <script>
     // =========================
     // CONFIG (edit as needed)
@@ -1581,6 +1641,50 @@ Please share full details and help me schedule a guided visit.`;
       toast("Sent! Opening WhatsApp…");
       form.reset();
     });
+  </script>
+  <script>
+    // Image lightbox (gallery) — open images in a modal
+    (function(){
+      function initLightbox(){
+        const overlay = document.getElementById('lightboxOverlay');
+        const imgEl = document.getElementById('lightboxImage');
+        const closeBtn = document.getElementById('lightboxClose');
+        if(!overlay || !imgEl || !closeBtn) return;
+
+        const open = (src, alt) => {
+          imgEl.src = src;
+          imgEl.alt = alt || '';
+          overlay.classList.add('active');
+          overlay.removeAttribute('aria-hidden');
+          document.body.style.overflow = 'hidden';
+        };
+
+        const close = () => {
+          overlay.classList.remove('active');
+          overlay.setAttribute('aria-hidden','true');
+          imgEl.src = '';
+          document.body.style.overflow = '';
+        };
+
+        // Click thumbnails
+        document.querySelectorAll('.gallery .img').forEach(el => {
+          el.style.cursor = 'zoom-in';
+          el.addEventListener('click', (e) => {
+            const src = el.getAttribute('data-large') || el.src;
+            const alt = el.alt || '';
+            open(src, alt);
+          });
+        });
+
+        // Close handlers
+        closeBtn.addEventListener('click', close);
+        overlay.addEventListener('click', (e) => { if(e.target === overlay) close(); });
+        document.addEventListener('keydown', (e) => { if(e.key === 'Escape' && overlay.classList.contains('active')) close(); });
+      }
+
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initLightbox);
+      else initLightbox();
+    })();
   </script>
 </body>
 
