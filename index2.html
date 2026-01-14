@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ostional.life — Los Llanos • Terrenos</title>
+  <meta name="description" content="Los Llanos: terrenos amplios y planos cerca de Nosara, Ostional y playas icónicas. Tranquilidad, confianza y acompañamiento profesional." />
+  <link rel="canonical" href="https://ostional.life/" />
+  <meta name="theme-color" content="#f7fafc" />
+
+  <style>
+    :root{
+      --bg:#f7fafc;         /* tono de calma */
+      --surface:#ffffff;    /* tarjetas */
+      --text:#0f1724;       /* texto principal */
+      --muted:#6b7280;      /* texto secundario */
+      --accent:#4aa0d5;     /* color principal */
+      --accent-2:#7ed6e6;   /* acento suave */
+      --radius:12px;
+      --max:1100px;
+      --shadow: 0 8px 20px rgba(16,24,40,0.06);
+    }
+
+    *{box-sizing:border-box}
+    html{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    body{margin:0;background:var(--bg);color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased}
+
+    a{color:inherit;text-decoration:none}
+
+    .container{max-width:var(--max);margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+
+    .brand{display:flex;align-items:center;gap:12px}
+    .mark{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .brand h1{margin:0;font-size:18px}
+    .brand p{margin:0;color:var(--muted);font-size:13px}
+
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:var(--muted);font-weight:600;padding:8px;border-radius:8px}
+    nav a:hover{background:rgba(74,160,213,0.08);color:var(--text)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;padding:36px 0;align-items:center}
+    @media(min-width:880px){.hero{grid-template-columns:1fr 420px}}
+
+    .hero-left{padding:20px}
+    .badge{display:inline-block;padding:8px 12px;background:rgba(122,152,165,0.10);color:var(--accent);border-radius:999px;font-weight:700;font-size:13px}
+    h2{font-size:clamp(26px,4.6vw,40px);margin:12px 0 10px}
+    p.lead{margin:0;color:var(--muted);max-width:60ch}
+
+    .actions{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;font-weight:700;border:1px solid transparent;cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;box-shadow:0 8px 18px rgba(74,160,213,0.16)}
+    .btn.ghost{background:transparent;border:1px solid rgba(15,23,36,0.06);color:var(--text)}
+
+    /* Card */
+    .card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+    .card h3{margin:0 0 8px}
+    .meta{display:flex;gap:12px;color:var(--muted);font-size:14px}
+
+    /* Footer */
+    footer{margin-top:40px;padding:28px 0;color:var(--muted);font-size:14px;border-top:1px solid rgba(15,23,36,0.04)}
+
+    /* Utility */
+    .muted{color:var(--muted)}
+    .small{font-size:13px}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="mark">OL</div>
+        <div>
+          <h1>Ostional.life</h1>
+          <p>Los Llanos — Terrenos en Río Montaña</p>
+        </div>
+      </div>
+
+      <nav aria-label="Navegación principal">
+        <a href="#los-llanos">Terrenos</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#visita">Visita guiada</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="hero-left">
+        <span class="badge">Terrenos amplios • 5,000 m²+</span>
+        <h2>Terrenos amplios y planos cerca de Nosara y playas icónicas</h2>
+        <p class="lead">Los Llanos ofrece parcelas de baja densidad en Río Montaña, Guanacaste — un entorno pensado para tranquilidad, privacidad y conexión con la naturaleza. Ideal para proyectos residenciales y retiros sostenibles.</p>
+
+        <div class="actions">
+          <a class="btn primary" href="#los-llanos">Explorar terrenos</a>
+          <a class="btn ghost" href="https://wa.me/50683189195" target="_blank" rel="noopener">Contactar por WhatsApp</a>
+        </div>
+
+        <div style="margin-top:20px" class="small muted">Visitas guiadas disponibles — coordina por WhatsApp (+506 8318 9195)</div>
+      </div>
+
+      <aside class="card">
+        <h3>Resumen</h3>
+        <p class="muted small">Ubicación: Río Montaña, Guanacaste — minutos a Nosara, Ostional y Playa Pelada.</p>
+        <div style="height:12px"></div>
+        <div class="meta">
+          <div>
+            <strong>5,000 m²+</strong>
+            <div class="muted small">Parcelas planas</div>
+          </div>
+          <div>
+            <strong>Acceso</strong>
+            <div class="muted small">Vías locales y servicios cercanos</div>
+          </div>
+        </div>
+
+        <div style="height:18px"></div>
+        <a class="btn primary" href="https://wa.me/50683189195" target="_blank" rel="noopener">Solicitar visita</a>
+      </aside>
+    </main>
+
+    <section id="los-llanos">
+      <div class="card">
+        <h3>Los Llanos</h3>
+        <p class="muted small">Comunidad de baja densidad con enfoque en preservar el carácter natural del lugar. Parcelas amplias que permiten privacidad y múltiples configuraciones de construcción.</p>
+      </div>
+    </section>
+
+    <section id="ubicacion">
+      <div class="card">
+        <h3>Ubicación</h3>
+        <p class="muted small">A pocos minutos de Nosara, Ostional y Playa Pelada. Fácil acceso a servicios y conexión con las principales playas de la zona.</p>
+      </div>
+    </section>
+
+    <section id="visita">
+      <div class="card">
+        <h3>Visitas guiadas</h3>
+        <p class="muted small">Coordinamos visitas con un guía local para mostrar las parcelas y la zona. Agenda por WhatsApp para una atención rápida y personalizada.</p>
+        <div style="margin-top:12px">
+          <a class="btn primary" href="https://wa.me/50683189195" target="_blank" rel="noopener">Agendar visita</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="muted small">© Ostional.life • +506 8318 9195 • <a href="mailto:info@ostional.life">info@ostional.life</a></div>
+    </footer>
+  </div>
+</body>
+
+</html>
