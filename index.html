@@ -406,8 +406,10 @@
       gap: 14px;
     }
 
-    @media (max-width: 980px){
-      .cards .card .img{ height:160px }
+    @media (max-width: 980px) {
+      .cards .card .img {
+        height: 160px
+      }
     }
 
     .mini {
@@ -514,8 +516,12 @@
     }
 
     /* Responsive Google Maps embed */
+    /* Responsive Google Maps embed - allow parent-controlled height */
     .map-embed {
+      /* Keep a default aspect but allow the container to control height */
       aspect-ratio: 16/10;
+      height: 100%;
+      min-height: 450px;
       border-radius: var(--radius);
       overflow: hidden;
       border: 1px solid rgba(255,255,255,.10);
@@ -529,22 +535,23 @@
       width:100%;
       height:100%;
       min-height:450px; /* guarantees visible area on small screens */
+      /* guarantees visible area on small screens */
     }
 
     .map-embed iframe {
-      width:100%;
-      height:100%;
-      border:0;
-      display:block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
     }
 
     /* Small tweak for the external link */
-    .map-link{
-      display:inline-block;
-      margin-top:8px;
-      color:var(--text);
-      font-weight:800;
-      text-decoration:none;
+    .map-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--text);
+      font-weight: 800;
+      text-decoration: none;
     }
 
     .gallery {
@@ -556,28 +563,67 @@
     }
 
     /* Ensure gallery images fully cover their grid cells */
-    .gallery .img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
+    .gallery .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
       border-radius: calc(var(--radius) - 6px);
-      border:1px solid rgba(255,255,255,.04);
+      border: 1px solid rgba(255, 255, 255, .04);
     }
 
     /* Make the main item taller to match the design */
-    .g1 { grid-column: span 6; grid-row: span 2; }
-    .g2 { grid-column: span 3; grid-row: span 1; }
-    .g3 { grid-column: span 3; grid-row: span 1; }
-    .g4 { grid-column: span 4; grid-row: span 1; }
-    .g5 { grid-column: span 4; grid-row: span 1; }
-    .g6 { grid-column: span 4; grid-row: span 1; }
+    .g1 {
+      grid-column: span 6;
+      grid-row: span 2;
+    }
 
-    @media (max-width: 980px){
-      .gallery { grid-template-columns: repeat(6, minmax(0,1fr)); grid-auto-rows: 150px }
-      .g1{ grid-column: span 6; grid-row: span 1 }
-      .g2,.g3{ grid-column: span 3 }
-      .g4,.g5,.g6{ grid-column: span 3 }
+    .g2 {
+      grid-column: span 3;
+      grid-row: span 1;
+    }
+
+    .g3 {
+      grid-column: span 3;
+      grid-row: span 1;
+    }
+
+    .g4 {
+      grid-column: span 4;
+      grid-row: span 1;
+    }
+
+    .g5 {
+      grid-column: span 4;
+      grid-row: span 1;
+    }
+
+    .g6 {
+      grid-column: span 4;
+      grid-row: span 1;
+    }
+
+    @media (max-width: 980px) {
+      .gallery {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-auto-rows: 150px
+      }
+
+      .g1 {
+        grid-column: span 6;
+        grid-row: span 1
+      }
+
+      .g2,
+      .g3 {
+        grid-column: span 3
+      }
+
+      .g4,
+      .g5,
+      .g6 {
+        grid-column: span 3
+      }
     }
 
     details {
@@ -712,7 +758,6 @@
   <header class="nav" role="banner">
     <div class="container nav-inner">
       <a class="logo" href="#top" aria-label="Ostional.life Home">
-        <!-- <span class="mark" aria-hidden="true"></span> -->
         <img style="width: 36px; height: 36px;" src="/assets/icons/logo.png" alt="logo" loading="lazy"
           decoding="async" />
         <span>Ostional<span style="color:var(--muted)">.life</span></span>
@@ -743,7 +788,7 @@
       <div class="container grid">
         <div>
           <div class="badge">🌿 Blue Zone lifestyle • 🏖️ Beaches nearby • 🧘 Wellness & retirement</div>
-
+          
           <h1>Live the Ostional Life — spacious land, nature, and beaches nearby.</h1>
 
           <p class="sub">
@@ -892,16 +937,16 @@
           </div>
 
           <figure class="card mini" aria-label="Map preview" style="min-height: 538px;">
-            <!-- Interactive Google Maps (JS API) with marker. Replace 'YOUR_API_KEY' below with a real API key. If absent, a fallback iframe is used. -->
             <div class="map-embed" role="region" aria-label="Map — Ostional, Costa Rica">
               <div id="map" aria-hidden="false"></div>
             </div>
-            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=9.996383,-85.676889" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=9.996383,-85.676889"
+              target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
           </figure>
 
           <script>
             /* Map initialization: center on Ostional, Costa Rica */
-            function initMap(){
+            function initMap() {
               const center = { lat: 9.996383, lng: -85.676889 };
               const mapEl = document.getElementById('map');
               // Create a map and place a marker
@@ -914,10 +959,10 @@
               new google.maps.Marker({ position: center, map, title: 'Ostional, Costa Rica' });
             }
 
-            (function loadGoogleMaps(){
+            (function loadGoogleMaps() {
               var API_KEY = 'YOUR_API_KEY'; // <-- replace this with your key
               var mapEl = document.getElementById('map');
-              if(!API_KEY || API_KEY === 'YOUR_API_KEY'){
+              if (!API_KEY || API_KEY === 'YOUR_API_KEY') {
                 // Fallback to simple iframe (no API key required)
                 mapEl.innerHTML = '<iframe src="https://www.google.com/maps?q=9.996383,-85.676889&z=13&output=embed" loading="lazy" title="Ostional, Costa Rica" style="width:100%;height:100%;border:0"></iframe>';
                 return;
@@ -1087,6 +1132,51 @@
           Availability may change. Please contact us to confirm the latest status.
         </p>
 
+      </div>
+    </section>
+
+    <!-- HOW IT LOOKS TODAY -->
+    <section id="looks" aria-label="Gallery section">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>How It Looks Today</h2>
+            <p>A broad, pristine canvas of natural land—ready to be shaped into homes, gardens, and spaces for living
+              well.</p>
+          </div>
+        </div>
+
+        <div class="gallery" role="list">
+          <img class="img g1" role="listitem" src="/assets/gallery/1.jpg" alt="Playa Ostional coastline." loading="lazy"
+            decoding="async" />
+          <img class="img g2" role="listitem" src="/assets/gallery/2.jpg" alt="Playa Ostional coastline." loading="lazy"
+            decoding="async" />
+
+          <img class="img g3" role="listitem" src="/assets/gallery/3.jpg" alt="Playa Guiones / surf lifestyle."
+            loading="lazy" decoding="async" />
+          <img class="img g4" role="listitem" src="/assets/gallery/4.jpg" alt="Playa Pelada / Nosara area."
+            loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WILL BE -->
+    <section id="future-looks" aria-label="Future gallery section">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>How It Could Be</h2>
+            <p>Make your vacation or permanent home a reality—create private retreats, gardens, and living spaces shaped
+              to your vision.</p>
+          </div>
+        </div>
+
+        <div class="gallery" role="list">
+          <img class="img g1" role="listitem" src="/assets/gallery/1ai.png" alt="Playa Ostional coastline."
+            loading="lazy" decoding="async" />
+          <img class="img g2" role="listitem" src="/assets/gallery/2ai.png" alt="Playa Ostional coastline."
+            loading="lazy" decoding="async" />
+        </div>
       </div>
     </section>
 
@@ -1260,11 +1350,6 @@
             loading="lazy" decoding="async" />
           <img class="img g6" role="listitem" src="/assets/gallery/SanJuanillo2.jpeg" alt="Playa San Juanillo"
             loading="lazy" decoding="async" />
-        </div>
-
-        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
-          <a class="btn whatsapp" id="waGallery" href="#">Request the full photo set</a>
-          <a class="btn" href="#contact">Schedule a visit</a>
         </div>
       </div>
     </section>
