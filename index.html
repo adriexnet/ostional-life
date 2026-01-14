@@ -1190,7 +1190,7 @@
           </table>
 
           <figure aria-label="Legal documents image" class="card mini">
-            <img class="img" src="/assets/images/croquis.png"
+            <img class="img zoom" src="/assets/images/croquis.png"
               alt="Los Llanos site plan showing 8 lots and current availability." loading="lazy" decoding="async" />
           </figure>
         </div>
@@ -1666,8 +1666,8 @@ Please share full details and help me schedule a guided visit.`;
           document.body.style.overflow = '';
         };
 
-        // Click thumbnails
-        document.querySelectorAll('.gallery .img').forEach(el => {
+        // Click thumbnails (gallery + any image explicitly marked with .zoom)
+        document.querySelectorAll('.gallery .img, .img.zoom').forEach(el => {
           el.style.cursor = 'zoom-in';
           el.addEventListener('click', (e) => {
             const src = el.getAttribute('data-large') || el.src;
